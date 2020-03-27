@@ -30,3 +30,28 @@
 *.exe
 *.out
 *.app
+
+# Visual Studio
+*.sln
+*.suo
+*.db
+*.ipch
+*.vcxproj
+*.filters
+*.user
+*.log
+*.txt
+*.lastbuildstate
+*.tlog
+*.idb
+*.pdb
+*.ilk
+*.opendb
+*.res
+*.sdf
+*.db-shm
+*.db-wal
+
+# Boost related
+*.props
+*.exp
