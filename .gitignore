@@ -52,6 +52,8 @@
 *.db-shm
 *.db-wal
 *.asm
+*.iobj
+*.ipdb
 
 # Boost related
 *.props
