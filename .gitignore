@@ -51,6 +51,7 @@
 *.sdf
 *.db-shm
 *.db-wal
+*.asm
 
 # Boost related
 *.props
