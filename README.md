@@ -71,3 +71,30 @@ says scalar operation which is not effective at all.
 - Work sharing (for/do/sections)
 - Control synchronization (critical, atomic, barrier)
 - Data sharing
+
+
+
+## Intel MPI (Message Passing Interface)
+- Multithreading typically confined to a single device/process
+- Run many processes on many machines/devices
+    - Several machines on a network, each having >1 GPU or CPU
+- Some sort of IPC required
+- All forms of parallelism can be used at the same time
+- Library + process manager solution
+    - Requires some structure undarstanding
+
+
+### Hello, MPI!
+- Communicator: group of processes. Default: MPI_COMM_WORLD all the processes.
+- Rank: the processes' position within the communicator
+- API commands prefixed by MPI_
+- MPI ises its own typedefs
+
+#### Config
+- Additional Include Directories: MPI's include
+- Additional Library Directories: MPI's lib
+- Linker Input Additional Dependencies: impi.lib;impicxx.lib
+- Configuration Properties, Debugging, Command to mpiexec.exe
+    - Command Arguments "$(TargetPath)" -n 4
+- dll files still needs to be linked for runtime
+- Boost MPI needs to be built explicitly
