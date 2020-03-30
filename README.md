@@ -98,3 +98,19 @@ says scalar operation which is not effective at all.
     - Command Arguments "$(TargetPath)" -n 4
 - dll files still needs to be linked for runtime
 - Boost MPI needs to be built explicitly
+
+
+### Point-to-Point Communication Modes
+- Standard: Returns as soon as message is sent
+- Synchronous: Returns only when the exchange is complete (handshake)
+- Buffered: Returns immediately, buffers the message
+- Ready: Initiated only when receiving is set up. Finishes immediately
+
+
+### Collective Communication
+- Broadcast: Used both for sending and receiving determined by root parameter
+- Barrier: Ensures every process reaches this point
+
+
+### Summary
+- Use Boost if you can :)
