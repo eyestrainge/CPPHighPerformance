@@ -114,3 +114,36 @@ says scalar operation which is not effective at all.
 
 ### Summary
 - Use Boost if you can :)
+
+
+
+## C++ AMP
+- GPU computing: Highly parallel architecture not just for games/graphics!
+- Different programming model
+    - SIMT (Single Instruction, Multiple Threads)
+- CUDA (NVIDIA), OpenCL (Cross platform) as examples
+- C++ AMP as Accelerated Massive Parallelism
+    - A Compiler_Library solution for heterogeneous computing
+        - Leverage data-parallel hardware (GPU)
+    - Uses mostly ordinary C++ with some language enhancements
+
+
+### Hello C++ AMP
+- Debugger Type: GPU Only (C++ AMP)
+
+
+### Tiling
+- GPU Memory
+    - Global memory
+        - Slow access, available for all threads
+    - Thread-local memory
+        - Fast but per-thread
+    - Shared (tile-static) memory
+        - Shared between a group of threads
+        - Fast, but limited in scope
+        - Beneficial when several reads/writes are taking place
+- What is Tiling?
+    - Splits the overall extent into several tiles
+    - Take a 4x4 extent and split it into four 2x2 tiles
+    - Now each element has: A global index, a local index
+
