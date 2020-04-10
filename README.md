@@ -147,3 +147,9 @@ says scalar operation which is not effective at all.
     - Take a 4x4 extent and split it into four 2x2 tiles
     - Now each element has: A global index, a local index
 
+
+
+## SUMMARY
+- Start with a non-parallel solution and work up
+- SIMD --> Threads --> Processes
+- Custom hardware (GPU, FPGA, etc.) does parallelism better at the cost of development time
